@@ -22,23 +22,34 @@ body {
 .loader-box {
     position: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
 }
 /* 4dots loading */
-
-.loader-box div:nth-of-type(3),
-.loader-box div:nth-of-type(4),
-.loader-box div:nth-of-type(5),
-.loader-box div:nth-of-type(6) {
-    display: inline;
+.cup-box{
+    display: flex;
+    flex-direction: row;
+   
+}
+.load {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.loader-box .load div:nth-of-type(1),
+.loader-box .load div:nth-of-type(2),
+.loader-box .load div:nth-of-type(3),
+.loader-box .load div:nth-of-type(4) {
+    /* display: inline; */
     background-color: #ffffff;
     margin: 0 6px;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 50%;  
+    width: 20px;
+    height: 20px;
 }
-.loader-box div:nth-of-type(3){
+.loader-box .load div:nth-of-type(1){
     animation: firstBounce 1s ease infinite alternate;
 }
 @keyframes firstBounce {
@@ -50,7 +61,7 @@ body {
 
     }
 }
-.loader-box div:nth-of-type(4){
+.loader-box .load div:nth-of-type(2){
     animation: secondBounce 1s ease .5s infinite alternate;
 }
 @keyframes secondBounce {
@@ -62,7 +73,7 @@ body {
 
     }
 }
-.loader-box div:nth-of-type(5){
+.loader-box .load div:nth-of-type(3){
     animation: thirdBounce 1s ease 1s infinite alternate;
 }
 @keyframes thirdBounce {
@@ -74,7 +85,7 @@ body {
 
     }
 }
-.loader-box div:nth-of-type(6){
+.loader-box .load div:nth-of-type(4){
     animation: fourthBounce 1s ease 1.5s infinite alternate;
 }
 @keyframes fourthBounce {
@@ -87,14 +98,15 @@ body {
     }
 }
 
-.loader-box div:nth-of-type(7) {
+.loader-box .load div:nth-of-type(5) {
     font-size: 28px;
     padding: 0 5px;
     color: #ffffff;
+    display: inline;
 }
 
 /* coffee cup loading */
-.loader-box div:nth-of-type(1) {
+.loader-box .cup-box div:nth-of-type(1) {
     width: 150px;
     height: 150px;
     border: 10px solid white;
@@ -119,11 +131,11 @@ body {
         background-position: -1000px -40px;      
     }
 }
-.loader-box div:nth-of-type(2) {
+.loader-box .cup-box div:nth-of-type(2) {
     width: 50px;
     height: 50px;
     border: 8px solid white;
-    margin-top: -20px;
+    margin-top: 20px;
     border-left: 0;
     border-bottom-right-radius: 40%;
     border-top-right-radius: 40%;
@@ -141,7 +153,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* clip-path:polygon(0 0, 100% 0, 100% 80%, 0 100%); */
 }
+
+
 
 
